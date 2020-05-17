@@ -1,0 +1,27 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-size: 15px;
+    margin: 0;
+    line-height: 24px;
+}
+
+body {
+    height: 100vh !important;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+body, html, #app, #app > div {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.m-b-15 {
+    margin-bottom: 15px
+}
