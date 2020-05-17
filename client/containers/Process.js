@@ -8,15 +8,23 @@ import api from '../utils/api';
 class Process extends Component {
   constructor(props) {
     super(props);
+
+    this.setState({
+      applicant_id: ''
+    });
   }
 
   componentDidMount(){
     api.get('/onfido_init').then(res => {
+      this.setState({
+        applicant_id: res.data.applicant_id
+      });
+      
       init({
-        token: res.sdk_token,
+        token: res.data.sdk_token,
         containerId: 'onfido-mount',
         onComplete: function(data) {
-          console.log("everything is complete");
+          console.log("Finished==========", data);
         }
       });
     });
