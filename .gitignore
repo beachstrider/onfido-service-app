@@ -1,7 +1,10 @@
 /.idea
 /node_modules
+.env
 /logs
 /dist
-.env
+
 
 npm-debug.log
+
+.now

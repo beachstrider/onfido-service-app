@@ -7,7 +7,20 @@ export async function init(req, res) {
       region: Region.US
     });
 
-    console.log('here', onfido);
+    const applicant = await onfido.applicant.create({
+      firstName: "Jane",
+      lastName: "Doe"
+    });
+
+    const generateSdkToken = await onfido.sdkToken.generate({
+      applicantId: applicant.id,
+      referrer: "https://*.example.com/example_page/**"
+    });
+
+    res.json({
+      sdk_token: generateSdkToken
+    });
+    
   } catch (error) {
     if (error instanceof OnfidoApiError) {
       console.log(error.message);
