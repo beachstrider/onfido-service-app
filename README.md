@@ -1,4 +1,4 @@
-Express, React/Redux, MySQL Boilerplate
+Onfido service app - React/Redux, Node/Express, Onfido
 
 ## Get Started
 
@@ -13,7 +13,7 @@ Express, React/Redux, MySQL Boilerplate
 On the command prompt run the following commands:
 
 ``` 
- $ git clone https://github.com/Bikranshu/express-react-boilerplate.git
+ $ git clone https://github.com/jai729/onfido-service-app
  $ cd express-react-boilerplate
  $ cp .env.example .env (edit it with your secret key and database information)
  $ npm install
