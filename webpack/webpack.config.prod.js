@@ -35,7 +35,13 @@ var config = {
                     presets: ['@babel/preset-env', '@babel/preset-react'],
                     plugins: ['@babel/plugin-proposal-function-bind', '@babel/plugin-proposal-class-properties'],
                 },
-            }
+            },
+            {
+                test: /\.css$/, loader: 'style-loader!css-loader'
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i, loader: "file-loader"
+            },
         ]
     },
     resolve: {
