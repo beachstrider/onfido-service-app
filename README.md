@@ -35,9 +35,9 @@ List of NPM Commands:
 
 ### 3. Usage
 
-URL : http://localhost:3000/
+URL : http://localhost:5000/
 
-Navigate to http://localhost:3000/swagger/ for the API documentation.
+Navigate to http://localhost:5000/swagger/ for the API documentation.
 
 ### 4. Useful Link
 - Web framework for Node.js - [Express](http://expressjs.com/)

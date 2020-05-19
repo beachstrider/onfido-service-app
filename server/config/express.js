@@ -16,7 +16,7 @@ const app = express();
 
 const server = http.createServer(app);
 const io = socketIo(server);
-server.listen(process.env.APP_PORT || 3000);
+server.listen(process.env.APP_PORT || 5000);
 
 io.on('connection', socket => {
   console.log('User connected');
@@ -26,7 +26,7 @@ io.on('connection', socket => {
 });
 
 
-app.set('port', process.env.APP_PORT || 3000);
+app.set('port', process.env.APP_PORT || 5000);
 app.set('host', process.env.APP_HOST || 'localhost');
 
 app.use(express.static(constant.distDir));
