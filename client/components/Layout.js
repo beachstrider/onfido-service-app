@@ -20,7 +20,7 @@ export default class Layout extends Component {
                 <img src={Logo} />
               </div>
               <div className="main-content">
-                <div>
+                <div style={this.props.style}>
                   {this.props.children}
                 </div>
               </div>

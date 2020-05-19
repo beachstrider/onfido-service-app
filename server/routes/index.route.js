@@ -7,12 +7,20 @@ router.route('/').get((req, res) => {
   res.send('test api');
 });
 
-router.route('/onfido_init').get((req, res) => {
+router.route('/create-token').get((req, res) => {
+  onfido.createToken(req, res);
+});
+
+router.route('/onfido-init/:token').get((req, res) => {
   onfido.init(req, res);
 });
 
-router.route('/onfido_check').get((req, res) => {
+router.route('/onfido-check/:applicant_id').get((req, res) => {
   onfido.check(req, res);
+});
+
+router.route('/onfido-hook').post((req, res) => {
+  onfido.readWebhookEvent(req, res);
 });
 
 export default router;

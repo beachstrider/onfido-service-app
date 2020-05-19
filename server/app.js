@@ -13,7 +13,6 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from '../webpack/webpack.config.dev';
 
 if (process.env.NODE_ENV === 'development') {
-
     const compiler = webpack(webpackConfig);
     app.use(webpackDevMiddleware(compiler, {noInfo: true, publicPath: webpackConfig.output.publicPath}));
     app.use(webpackHotMiddleware(compiler));
@@ -42,6 +41,7 @@ app.use(joiErrorHandler);
 app.use(errorHandler.notFoundErrorHandler);
 app.use(errorHandler.genericErrorHandler);
 app.use(errorHandler.methodNotAllowed);
+
 
 app.listen(app.get('port'), app.get('host'), () => {
     console.log(`Server running at http://${app.get('host')}:${app.get('port')}`);

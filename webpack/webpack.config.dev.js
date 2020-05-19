@@ -54,7 +54,8 @@ const config = {
             'react-dom': '@hot-loader/react-dom'
         }
     },
-    devtool: "inline-source-map"
+    devtool: "cheap-module-source-map"
+    // devtool: "inline-source-map"
 };
 
 module.exports = config;

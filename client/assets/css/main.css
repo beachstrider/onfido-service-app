@@ -26,7 +26,6 @@
 .content-wrapper{
   width: 100%;
   height: 100%;
-  margin: 30px;
 }
 
 .logo-wrapper{
@@ -39,7 +38,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 #onfido-mount{
@@ -54,6 +53,37 @@
   box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
 }
 
+.onfido-sdk-ui-Button-button{
+  border-radius: 36px !important;
+}
+
+.main-container h1, .main-container h2, .main-container h3, .main-container h4, .main-container h5, .main-container h6 {
+  font-weight: 500;
+}
+
+.MuiGrid-item{
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+}
+
+.btn-submit{
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  font-weight: 400 !important;
+  padding: 15px 48px !important;
+  border-radius: 30px !important;
+  background-color: #353FF4 !important;
+}
+
+.btn-submit:hover{
+  background-color: #5c6cff !important;
+}
+
+.loader-circle{
+  position: fixed !important;
+  left: calc(50% - 20px) !important;
+  top: calc(50% - 20px) !important;
+}
 
 
 
@@ -68,6 +98,11 @@
   .main-container{
     padding: 0 !important;
   }
+
+  .MuiCard-root {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
 
   .main-card{
     max-height: unset !important;

@@ -7,16 +7,14 @@ import NotFound from '../components/error/NotFound';
 
 const Home = loadable(() => import('../containers/Home'));
 const Process = loadable(() => import('../containers/Process'));
-const Dashboard = loadable(() => import('../containers/dashboard/DashboardContainer'));
+const Review = loadable(() => import('../containers/Review'));
 
 const Router = () => (
   <Fragment>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/process" component={Process} />
-
-      
-      <Route exact path="/dashboard" component={Dashboard} />
+      <Route exact path="/process/:token" component={Process} />
+      <Route exact path="/review" component={Review} />
       <Route component={NotFound} />
     </Switch>
   </Fragment>
