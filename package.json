@@ -38,7 +38,6 @@
     "@material-ui/icons": "^4.5.1",
     "@onfido/api": "^1.1.0",
     "axios": "^0.19.2",
-    "babel-cli": "^6.26.0",
     "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
     "bookshelf": "^1.1.1",
@@ -59,7 +58,7 @@
     "method-override": "^3.0.0",
     "morgan": "^1.9.1",
     "mysql": "^2.17.1",
-    "onfido-sdk-ui": "^5.9.1",
+    "onfido-sdk-ui": "^5.9.2",
     "path": "^0.12.7",
     "randomstring": "^1.1.5",
     "react": "^16.12.0",
@@ -78,7 +77,8 @@
     "url-loader": "^4.1.0",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^4.3.1"
-,
+  },
+  "devDependencies": {
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
     "@babel/node": "^7.7.4",

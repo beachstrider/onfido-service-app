@@ -47,15 +47,14 @@ const config = {
             {
                 test: /\.(jpe?g|png|gif|svg)$/i, loader: "file-loader"
             },
-        ],
+        ]
     },
     resolve: {
         alias: {
             'react-dom': '@hot-loader/react-dom'
         }
     },
-    devtool: "cheap-module-source-map"
-    // devtool: "inline-source-map"
+    devtool: "inline-source-map"
 };
 
 module.exports = config;

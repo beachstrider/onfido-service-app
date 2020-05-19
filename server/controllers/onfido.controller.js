@@ -8,8 +8,6 @@ import {
 } from '@onfido/api';
 import ApplicantTemp from '../models/applicant.model';
 import randomstring from 'randomstring';
-import io from '../config/express';
-import axios from 'axios';
 
 const webhookToken = process.env.ONFIDO_WEBHOOK_SECRET_TOKEN;
 const verifier = new WebhookEventVerifier(webhookToken);
@@ -117,12 +115,6 @@ export async function readWebhookEvent(req, res) {
   try {
     const payload = verifier.readPayload(req.rawBody, req.headers['x-sha2-signature']);
     if(payload.resourceType === 'report' && payload.action === 'report.completed'){
-      // const test = await axios.get('https://api.us.onfido.com/v2/checks/65ba3cba-fb26-4efc-910c-b8963ebf3891/reports/d366aa7d-1a54-4932-8098-7b75041ff9a0', {
-      //   headers: {
-      //     'Authorization': `Token token=api_live_us.MaeAbLhMdLy.9Ltktp6QOTKL_UqwePmBXPge59D36uLL`
-      //   }
-      // });
-      // console.log('LINK: ', test);
       res.io.sockets.emit(
         'handle result',
         {

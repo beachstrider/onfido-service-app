@@ -19,7 +19,6 @@ class Home extends Component {
       this.setState({
         token: res.data.token
       });
-
       
       axios.get('https://api.us.onfido.com/v2/checks/65ba3cba-fb26-4efc-910c-b8963ebf3891/reports/d366aa7d-1a54-4932-8098-7b75041ff9a0', {
         headers: {

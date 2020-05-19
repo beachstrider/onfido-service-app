@@ -5,9 +5,8 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    height: 100vh !important;
     margin: 0;
-    background-color: #f2f2f2 !important;
+    background-color: #f2f2f2;
 }
 
 body, html, #app, #app > div {
